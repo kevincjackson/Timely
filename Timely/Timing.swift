@@ -9,7 +9,9 @@
 import UIKit
 
 struct Timing {
+    
     var name: String
     var color: UIColor
     var image: UIImage
+    
 }
