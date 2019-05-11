@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="skr-6k-j3L">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,49 +10,91 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Timing Journal-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Timely" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="JournalViewController" customModule="Timely" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="superEarly" translatesAutoresizingMaskIntoConstraints="NO" id="tfb-2r-py3">
-                                <rect key="frame" x="78" y="56" width="116" height="116"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="early" translatesAutoresizingMaskIntoConstraints="NO" id="yCP-Nd-20G">
-                                <rect key="frame" x="78" y="188" width="116" height="116"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="onTime" translatesAutoresizingMaskIntoConstraints="NO" id="3fa-RS-X36">
-                                <rect key="frame" x="78" y="312" width="116" height="116"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="late" translatesAutoresizingMaskIntoConstraints="NO" id="GCm-bT-SBd">
-                                <rect key="frame" x="78" y="446" width="116" height="116"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="superLate" translatesAutoresizingMaskIntoConstraints="NO" id="hy9-OW-NUd">
-                                <rect key="frame" x="78" y="570" width="116" height="116"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lKq-Lu-zbd">
+                                <rect key="frame" x="103.5" y="698" width="207" height="44"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="EIZ-dt-63y"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <state key="normal" title="Click Me">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="22"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oed-sx-ze2">
+                                <rect key="frame" x="0.0" y="782" width="414" height="80"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="IPL-Dc-CrN">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="o44-DM-iXq">
+                                            <rect key="frame" x="12" y="0.0" width="390" height="80"/>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="o44-DM-iXq" secondAttribute="bottom" id="2c4-K3-8UU"/>
+                                        <constraint firstAttribute="trailing" secondItem="o44-DM-iXq" secondAttribute="trailing" constant="12" id="QRu-ex-3zr"/>
+                                        <constraint firstItem="o44-DM-iXq" firstAttribute="top" secondItem="IPL-Dc-CrN" secondAttribute="top" id="nsG-2f-cna"/>
+                                        <constraint firstItem="o44-DM-iXq" firstAttribute="leading" secondItem="IPL-Dc-CrN" secondAttribute="leading" constant="12" id="s0b-q2-0j8"/>
+                                    </constraints>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="iiO-ko-Xbh"/>
+                                </constraints>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="oed-sx-ze2" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="2ym-nx-6UQ"/>
+                            <constraint firstItem="lKq-Lu-zbd" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="Foz-1o-EAP"/>
+                            <constraint firstItem="oed-sx-ze2" firstAttribute="top" secondItem="lKq-Lu-zbd" secondAttribute="bottom" constant="40" id="Nas-f8-pJP"/>
+                            <constraint firstItem="lKq-Lu-zbd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SX3-ir-lMA"/>
+                            <constraint firstItem="oed-sx-ze2" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="YKU-vd-3nM"/>
+                            <constraint firstItem="oed-sx-ze2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aqd-Jp-gIl"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Timing Journal" id="qXG-GG-Qfv"/>
+                    <connections>
+                        <outlet property="button" destination="lKq-Lu-zbd" id="vUr-Ee-lGD"/>
+                        <outlet property="stackView" destination="o44-DM-iXq" id="YZY-9P-rot"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="109.82142857142857"/>
+            <point key="canvasLocation" x="1047.8260869565217" y="109.82142857142857"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zcu-qX-K0c">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="skr-6k-j3L" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DIV-kc-Chp">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="DrS-g5-xaL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4kv-xY-bKM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="312" y="110"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="early" width="200" height="200"/>
-        <image name="late" width="200" height="200"/>
-        <image name="onTime" width="200" height="200"/>
-        <image name="superEarly" width="200" height="200"/>
-        <image name="superLate" width="200" height="200"/>
-    </resources>
 </document>
