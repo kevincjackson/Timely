@@ -18,6 +18,7 @@
 		0AFC09F422874ADB0006A355 /* JournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFC09F322874ADB0006A355 /* JournalViewController.swift */; };
 		0AFC09F622874C180006A355 /* Formatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFC09F522874C180006A355 /* Formatting.swift */; };
 		0AFC09F822874E870006A355 /* TimingSelectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFC09F722874E870006A355 /* TimingSelectable.swift */; };
+		0AFC09FF22876C150006A355 /* ImageSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFC09FE22876C150006A355 /* ImageSelector.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		0AFC09F322874ADB0006A355 /* JournalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalViewController.swift; sourceTree = "<group>"; };
 		0AFC09F522874C180006A355 /* Formatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatting.swift; sourceTree = "<group>"; };
 		0AFC09F722874E870006A355 /* TimingSelectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimingSelectable.swift; sourceTree = "<group>"; };
+		0AFC09FE22876C150006A355 /* ImageSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSelector.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		0AFC09FC22875E580006A355 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0AFC09FE22876C150006A355 /* ImageSelector.swift */,
 				0AFC09F322874ADB0006A355 /* JournalViewController.swift */,
 				0A1428432285E6C900C5842C /* SelectionViewController.swift */,
 				0AFC09F722874E870006A355 /* TimingSelectable.swift */,
@@ -189,6 +192,7 @@
 				0AE9647C22861A9500CAA3F7 /* Timing.swift in Sources */,
 				0AE9647E22861ACB00CAA3F7 /* TimingEntry.swift in Sources */,
 				0A1428422285E6C900C5842C /* AppDelegate.swift in Sources */,
+				0AFC09FF22876C150006A355 /* ImageSelector.swift in Sources */,
 				0AFC09F422874ADB0006A355 /* JournalViewController.swift in Sources */,
 				0AFC09F822874E870006A355 /* TimingSelectable.swift in Sources */,
 				0AFC09F622874C180006A355 /* Formatting.swift in Sources */,

@@ -11,38 +11,17 @@ import UIKit
 class SelectionViewController: UIViewController {
 
     @IBOutlet var addButton: UIButton!
-    @IBOutlet var stackView: UIStackView!
+    @IBOutlet var timingSelector: ImageSelector!
     
     private var currentTiming: Timing? {
         didSet {
-            guard let currentTiming = currentTiming else {
-                addButton.setTitle(nil, for: .normal)
-                addButton.backgroundColor = nil
-                return
-            }
-            addButton.setTitle("I'm \(currentTiming.name)", for: .normal)
-            addButton.backgroundColor = currentTiming.color
+            setAddButton(basedOnSelection: currentTiming)
         }
     }
     
     private var timings = [Timing]() {
         didSet {
-            buttons = timings.map {
-                let btn = UIButton()
-                btn.setImage($0.image, for: .normal)
-                btn.imageView?.contentMode = .scaleAspectFit
-                btn.adjustsImageWhenHighlighted = false
-                btn.addTarget(self, action: #selector(timingSelectionChanged(_:)), for: .touchUpInside)
-                return btn
-            }
-            currentTiming = .onTime
-        }
-    }
-    
-    private var buttons = [UIButton]() {
-        didSet {
-            oldValue.forEach { $0.removeFromSuperview() }
-            buttons.forEach { stackView.addArrangedSubview($0) }
+            timingSelector.images = timings.map { $0.image }
         }
     }
     
@@ -52,6 +31,11 @@ class SelectionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         timings = [.superLate, .late, .onTime, .early, .superEarly]
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        currentTiming = timings[2]
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -66,12 +50,20 @@ class SelectionViewController: UIViewController {
     }
     
     // MARK: - Helpers
-    @objc func timingSelectionChanged(_ sender: UIButton) {
-        guard let selectedIndex = buttons.firstIndex(of: sender) else {
-            preconditionFailure("Button index out of range.")
-        }
-        
+    @IBAction private func timingSelectionChanged(_ sender: ImageSelector) {
+        let selectedIndex = sender.selectedIndex
         currentTiming = timings[selectedIndex]
+    }
+    
+    private func setAddButton(basedOnSelection currentTiming: Timing?) {
+        guard let currentTiming = currentTiming else {
+            print("Couldn't set add button.")
+            addButton.setTitle(nil, for: .normal)
+            addButton.backgroundColor = nil
+            return
+        }
+        addButton.setTitle("I'm \(currentTiming.name)", for: .normal)
+        addButton.backgroundColor = currentTiming.color
     }
     
     @IBAction func addTimingButtonPressed(_ sender: UIButton) {
@@ -82,4 +74,3 @@ class SelectionViewController: UIViewController {
         timingSelectable.timingSelected(timingEntry)
     }
 }
-

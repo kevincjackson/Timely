@@ -50,15 +50,19 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="o44-DM-iXq">
-                                            <rect key="frame" x="12" y="0.0" width="390" height="100"/>
-                                        </stackView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZYr-Pl-G9L" customClass="ImageSelector" customModule="Timely" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <action selector="timingSelectionChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="joE-4q-F2g"/>
+                                            </connections>
+                                        </view>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="o44-DM-iXq" secondAttribute="bottom" id="2c4-K3-8UU"/>
-                                        <constraint firstAttribute="trailing" secondItem="o44-DM-iXq" secondAttribute="trailing" constant="12" id="QRu-ex-3zr"/>
-                                        <constraint firstItem="o44-DM-iXq" firstAttribute="top" secondItem="IPL-Dc-CrN" secondAttribute="top" id="nsG-2f-cna"/>
-                                        <constraint firstItem="o44-DM-iXq" firstAttribute="leading" secondItem="IPL-Dc-CrN" secondAttribute="leading" constant="12" id="s0b-q2-0j8"/>
+                                        <constraint firstItem="ZYr-Pl-G9L" firstAttribute="top" secondItem="IPL-Dc-CrN" secondAttribute="top" id="IxB-yI-rIM"/>
+                                        <constraint firstAttribute="trailing" secondItem="ZYr-Pl-G9L" secondAttribute="trailing" id="KOL-Pe-Gwy"/>
+                                        <constraint firstAttribute="bottom" secondItem="ZYr-Pl-G9L" secondAttribute="bottom" id="Q9S-vU-sCl"/>
+                                        <constraint firstItem="ZYr-Pl-G9L" firstAttribute="leading" secondItem="IPL-Dc-CrN" secondAttribute="leading" id="dH3-40-ZW6"/>
                                     </constraints>
                                 </view>
                                 <constraints>
@@ -85,7 +89,7 @@
                     <navigationItem key="navigationItem" title="Timing Journal" id="qXG-GG-Qfv"/>
                     <connections>
                         <outlet property="addButton" destination="lKq-Lu-zbd" id="vUr-Ee-lGD"/>
-                        <outlet property="stackView" destination="o44-DM-iXq" id="YZY-9P-rot"/>
+                        <outlet property="timingSelector" destination="ZYr-Pl-G9L" id="vQi-Yz-9w5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
