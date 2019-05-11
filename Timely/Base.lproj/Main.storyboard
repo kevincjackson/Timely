@@ -19,6 +19,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uPs-Uo-EL0">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <connections>
+                                    <segue destination="ACt-X1-jUR" kind="embed" identifier="journalSegue" id="9Y2-sf-ypT"/>
+                                </connections>
+                            </containerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lKq-Lu-zbd">
                                 <rect key="frame" x="103.5" y="698" width="207" height="44"/>
                                 <color key="backgroundColor" name="earlyColor"/>
@@ -34,6 +40,9 @@
                                         <integer key="value" value="22"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="addTimingButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Etx-tM-RFq"/>
+                                </connections>
                             </button>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oed-sx-ze2">
                                 <rect key="frame" x="0.0" y="782" width="414" height="80"/>
@@ -70,10 +79,14 @@
                         <constraints>
                             <constraint firstItem="3Hc-ba-4FN" firstAttribute="top" secondItem="oed-sx-ze2" secondAttribute="bottom" id="2px-6Z-cFd"/>
                             <constraint firstItem="oed-sx-ze2" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="2ym-nx-6UQ"/>
+                            <constraint firstItem="uPs-Uo-EL0" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="BNn-wi-Odh"/>
+                            <constraint firstItem="uPs-Uo-EL0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="DDZ-im-lc7"/>
                             <constraint firstItem="lKq-Lu-zbd" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="Foz-1o-EAP"/>
                             <constraint firstItem="oed-sx-ze2" firstAttribute="top" secondItem="lKq-Lu-zbd" secondAttribute="bottom" constant="40" id="Nas-f8-pJP"/>
+                            <constraint firstAttribute="bottom" secondItem="uPs-Uo-EL0" secondAttribute="bottom" id="Noq-W2-vw8"/>
                             <constraint firstItem="lKq-Lu-zbd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SX3-ir-lMA"/>
                             <constraint firstItem="oed-sx-ze2" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="YKU-vd-3nM"/>
+                            <constraint firstItem="uPs-Uo-EL0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aIz-4g-qKM"/>
                             <constraint firstItem="oed-sx-ze2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aqd-Jp-gIl"/>
                             <constraint firstAttribute="trailing" secondItem="3Hc-ba-4FN" secondAttribute="trailing" id="eOg-sf-Zr0"/>
                             <constraint firstItem="3Hc-ba-4FN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gCb-vf-I25"/>
@@ -90,6 +103,50 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="109.82142857142857"/>
+        </scene>
+        <!--Journal View Controller-->
+        <scene sceneID="rwE-A0-ty2">
+            <objects>
+                <tableViewController id="ACt-X1-jUR" customClass="JournalViewController" customModule="Timely" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="adE-s9-iGM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="journalCell" textLabel="bWx-pD-rzl" detailTextLabel="yW4-d4-z2r" style="IBUITableViewCellStyleSubtitle" id="1XS-4T-ZLE">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1XS-4T-ZLE" id="87L-nr-F14">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bWx-pD-rzl">
+                                            <rect key="frame" x="20" y="5" width="33.5" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yW4-d4-z2r">
+                                            <rect key="frame" x="20" y="25.5" width="44" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ACt-X1-jUR" id="G2p-kH-ZVe"/>
+                            <outlet property="delegate" destination="ACt-X1-jUR" id="EbD-gT-mdj"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hHu-PB-p0l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1890" y="140"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zcu-qX-K0c">

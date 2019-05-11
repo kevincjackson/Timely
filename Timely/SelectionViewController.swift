@@ -13,6 +13,7 @@ class SelectionViewController: UIViewController {
     @IBOutlet var addTimingButton: UIButton!
     @IBOutlet var stackView: UIStackView!
     
+    
     var currentTiming: Timing? {
         didSet {
             guard let currentTiming = currentTiming else {
@@ -45,12 +46,24 @@ class SelectionViewController: UIViewController {
         }
     }
     
+    var timingSelectable: TimingSelectable!
+    
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         timings = [.superLate, .late, .onTime, .early, .superEarly]
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "journalSegue":
+            let journalVC = segue.destination as! JournalViewController
+            self.timingSelectable = journalVC
+            segue.destination.additionalSafeAreaInsets = UIEdgeInsets(top: 0, left: 0, bottom: 160, right: 0)
+        default:
+            preconditionFailure("Unknown segue identifier.")
+        }
+    }
     
     // MARK: - Helpers
     @objc func timingSelectionChanged(_ sender: UIButton) {
@@ -61,5 +74,12 @@ class SelectionViewController: UIViewController {
         currentTiming = timings[selectedIndex]
     }
     
+    @IBAction func addTimingButtonPressed(_ sender: UIButton) {
+        guard let currentTiming = currentTiming else {
+            return
+        }
+        let timingEntry = TimingEntry(timing: currentTiming, date: Date())
+        timingSelectable.timingSelected(timingEntry)
+    }
 }
 
