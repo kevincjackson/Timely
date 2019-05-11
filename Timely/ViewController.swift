@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    let timings: [Timing] = [.superLate, .late, .onTime, .early, .superEarly]
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
