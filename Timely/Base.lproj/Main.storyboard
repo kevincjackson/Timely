@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,19 +14,19 @@
         <!--Timing Journal-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="JournalViewController" customModule="Timely" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SelectionViewController" customModule="Timely" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lKq-Lu-zbd">
                                 <rect key="frame" x="103.5" y="698" width="207" height="44"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" name="earlyColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="EIZ-dt-63y"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
-                                <state key="normal" title="Click Me">
+                                <state key="normal" title="Early">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -56,21 +57,33 @@
                                 </constraints>
                                 <blurEffect style="light"/>
                             </visualEffectView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Hc-ba-4FN">
+                                <rect key="frame" x="0.0" y="862" width="414" height="34"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="xXw-yF-MRe">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="34"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="3Hc-ba-4FN" firstAttribute="top" secondItem="oed-sx-ze2" secondAttribute="bottom" id="2px-6Z-cFd"/>
                             <constraint firstItem="oed-sx-ze2" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="2ym-nx-6UQ"/>
                             <constraint firstItem="lKq-Lu-zbd" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="Foz-1o-EAP"/>
                             <constraint firstItem="oed-sx-ze2" firstAttribute="top" secondItem="lKq-Lu-zbd" secondAttribute="bottom" constant="40" id="Nas-f8-pJP"/>
                             <constraint firstItem="lKq-Lu-zbd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SX3-ir-lMA"/>
                             <constraint firstItem="oed-sx-ze2" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="YKU-vd-3nM"/>
                             <constraint firstItem="oed-sx-ze2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aqd-Jp-gIl"/>
+                            <constraint firstAttribute="trailing" secondItem="3Hc-ba-4FN" secondAttribute="trailing" id="eOg-sf-Zr0"/>
+                            <constraint firstItem="3Hc-ba-4FN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gCb-vf-I25"/>
+                            <constraint firstAttribute="bottom" secondItem="3Hc-ba-4FN" secondAttribute="bottom" id="hMt-dT-Tof"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Timing Journal" id="qXG-GG-Qfv"/>
                     <connections>
-                        <outlet property="button" destination="lKq-Lu-zbd" id="vUr-Ee-lGD"/>
+                        <outlet property="addTimingButton" destination="lKq-Lu-zbd" id="vUr-Ee-lGD"/>
                         <outlet property="stackView" destination="o44-DM-iXq" id="YZY-9P-rot"/>
                     </connections>
                 </viewController>
@@ -97,4 +110,9 @@
             <point key="canvasLocation" x="312" y="110"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="earlyColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

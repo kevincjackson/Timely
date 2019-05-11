@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0A1428422285E6C900C5842C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1428412285E6C900C5842C /* AppDelegate.swift */; };
-		0A1428442285E6C900C5842C /* JournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1428432285E6C900C5842C /* JournalViewController.swift */; };
+		0A1428442285E6C900C5842C /* SelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1428432285E6C900C5842C /* SelectionViewController.swift */; };
 		0A1428472285E6C900C5842C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A1428452285E6C900C5842C /* Main.storyboard */; };
 		0A14284C2285E6CA00C5842C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A14284A2285E6CA00C5842C /* LaunchScreen.storyboard */; };
 		0A6DB35322861D4800D495D0 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6DB35222861D4800D495D0 /* UIColor+Extension.swift */; };
@@ -20,7 +20,7 @@
 /* Begin PBXFileReference section */
 		0A14283E2285E6C900C5842C /* Timely.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Timely.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A1428412285E6C900C5842C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0A1428432285E6C900C5842C /* JournalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalViewController.swift; sourceTree = "<group>"; };
+		0A1428432285E6C900C5842C /* SelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionViewController.swift; sourceTree = "<group>"; };
 		0A1428462285E6C900C5842C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0A14284B2285E6CA00C5842C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0A14284D2285E6CA00C5842C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -63,7 +63,7 @@
 			children = (
 				0A1428452285E6C900C5842C /* Main.storyboard */,
 				0A1428412285E6C900C5842C /* AppDelegate.swift */,
-				0A1428432285E6C900C5842C /* JournalViewController.swift */,
+				0A1428432285E6C900C5842C /* SelectionViewController.swift */,
 				0AE9647B22861A9500CAA3F7 /* Timing.swift */,
 				0AE9647D22861ACB00CAA3F7 /* TimingEntry.swift */,
 				0A6DB35222861D4800D495D0 /* UIColor+Extension.swift */,
@@ -144,7 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A1428442285E6C900C5842C /* JournalViewController.swift in Sources */,
+				0A1428442285E6C900C5842C /* SelectionViewController.swift in Sources */,
 				0AE9647C22861A9500CAA3F7 /* Timing.swift in Sources */,
 				0AE9647E22861ACB00CAA3F7 /* TimingEntry.swift in Sources */,
 				0A1428422285E6C900C5842C /* AppDelegate.swift in Sources */,
