@@ -10,10 +10,10 @@ import UIKit
 
 extension UIColor {
     
-    static let early = UIColor(named: "early")
-    static let late = UIColor(named: "late")
-    static let onTime = UIColor(named: "onTime")
-    static let superEarly = UIColor(named: "superEarly")
-    static let superLate = UIColor(named: "superLate")
+    static let early = UIColor(named: "earlyColor")
+    static let late = UIColor(named: "lateColor")
+    static let onTime = UIColor(named: "onTimeColor")
+    static let superEarly = UIColor(named: "superEarlyColor")
+    static let superLate = UIColor(named: "superLateColor")
     
 }
