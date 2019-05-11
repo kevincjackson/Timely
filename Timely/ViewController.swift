@@ -12,6 +12,11 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let p = Bundle.main.bundlePath
+        print(p)
+        let fs = try! FileManager.default.contentsOfDirectory(atPath: p)
+        print(fs)
     }
 }
 
