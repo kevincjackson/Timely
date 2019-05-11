@@ -26,12 +26,12 @@
                                 </connections>
                             </containerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lKq-Lu-zbd">
-                                <rect key="frame" x="103.5" y="698" width="207" height="44"/>
+                                <rect key="frame" x="103.5" y="722" width="207" height="44"/>
                                 <color key="backgroundColor" name="earlyColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="EIZ-dt-63y"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                 <state key="normal" title="Early">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -45,13 +45,13 @@
                                 </connections>
                             </button>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oed-sx-ze2">
-                                <rect key="frame" x="0.0" y="782" width="414" height="80"/>
+                                <rect key="frame" x="0.0" y="796" width="414" height="100"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="IPL-Dc-CrN">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="o44-DM-iXq">
-                                            <rect key="frame" x="12" y="0.0" width="390" height="80"/>
+                                            <rect key="frame" x="12" y="0.0" width="390" height="100"/>
                                         </stackView>
                                     </subviews>
                                     <constraints>
@@ -62,35 +62,23 @@
                                     </constraints>
                                 </view>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="iiO-ko-Xbh"/>
+                                    <constraint firstAttribute="height" constant="100" id="iiO-ko-Xbh"/>
                                 </constraints>
-                                <blurEffect style="light"/>
-                            </visualEffectView>
-                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Hc-ba-4FN">
-                                <rect key="frame" x="0.0" y="862" width="414" height="34"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="xXw-yF-MRe">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="34"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                </view>
                                 <blurEffect style="light"/>
                             </visualEffectView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="3Hc-ba-4FN" firstAttribute="top" secondItem="oed-sx-ze2" secondAttribute="bottom" id="2px-6Z-cFd"/>
-                            <constraint firstItem="oed-sx-ze2" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="2ym-nx-6UQ"/>
+                            <constraint firstItem="oed-sx-ze2" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="2ym-nx-6UQ"/>
                             <constraint firstItem="uPs-Uo-EL0" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="BNn-wi-Odh"/>
                             <constraint firstItem="uPs-Uo-EL0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="DDZ-im-lc7"/>
                             <constraint firstItem="lKq-Lu-zbd" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="Foz-1o-EAP"/>
-                            <constraint firstItem="oed-sx-ze2" firstAttribute="top" secondItem="lKq-Lu-zbd" secondAttribute="bottom" constant="40" id="Nas-f8-pJP"/>
+                            <constraint firstItem="oed-sx-ze2" firstAttribute="top" secondItem="lKq-Lu-zbd" secondAttribute="bottom" constant="30" id="Nas-f8-pJP"/>
                             <constraint firstAttribute="bottom" secondItem="uPs-Uo-EL0" secondAttribute="bottom" id="Noq-W2-vw8"/>
                             <constraint firstItem="lKq-Lu-zbd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SX3-ir-lMA"/>
                             <constraint firstItem="oed-sx-ze2" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="YKU-vd-3nM"/>
                             <constraint firstItem="uPs-Uo-EL0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aIz-4g-qKM"/>
                             <constraint firstItem="oed-sx-ze2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aqd-Jp-gIl"/>
-                            <constraint firstAttribute="trailing" secondItem="3Hc-ba-4FN" secondAttribute="trailing" id="eOg-sf-Zr0"/>
-                            <constraint firstItem="3Hc-ba-4FN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gCb-vf-I25"/>
-                            <constraint firstAttribute="bottom" secondItem="3Hc-ba-4FN" secondAttribute="bottom" id="hMt-dT-Tof"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

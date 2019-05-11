@@ -21,7 +21,7 @@ class SelectionViewController: UIViewController {
                 addTimingButton.backgroundColor = nil
                 return
             }
-            addTimingButton.setTitle(currentTiming.name, for: .normal)
+            addTimingButton.setTitle("I'm \(currentTiming.name)", for: .normal)
             addTimingButton.backgroundColor = currentTiming.color
         }
     }
