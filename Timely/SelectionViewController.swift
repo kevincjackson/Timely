@@ -10,23 +10,22 @@ import UIKit
 
 class SelectionViewController: UIViewController {
 
-    @IBOutlet var addTimingButton: UIButton!
+    @IBOutlet var addButton: UIButton!
     @IBOutlet var stackView: UIStackView!
     
-    
-    var currentTiming: Timing? {
+    private var currentTiming: Timing? {
         didSet {
             guard let currentTiming = currentTiming else {
-                addTimingButton.setTitle(nil, for: .normal)
-                addTimingButton.backgroundColor = nil
+                addButton.setTitle(nil, for: .normal)
+                addButton.backgroundColor = nil
                 return
             }
-            addTimingButton.setTitle("I'm \(currentTiming.name)", for: .normal)
-            addTimingButton.backgroundColor = currentTiming.color
+            addButton.setTitle("I'm \(currentTiming.name)", for: .normal)
+            addButton.backgroundColor = currentTiming.color
         }
     }
     
-    var timings = [Timing]() {
+    private var timings = [Timing]() {
         didSet {
             buttons = timings.map {
                 let btn = UIButton()
@@ -39,14 +38,15 @@ class SelectionViewController: UIViewController {
             currentTiming = .onTime
         }
     }
-    var buttons = [UIButton]() {
+    
+    private var buttons = [UIButton]() {
         didSet {
             oldValue.forEach { $0.removeFromSuperview() }
             buttons.forEach { stackView.addArrangedSubview($0) }
         }
     }
     
-    var timingSelectable: TimingSelectable!
+    private var timingSelectable: TimingSelectable!
     
     // MARK: - View Life Cycle
     override func viewDidLoad() {

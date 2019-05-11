@@ -71,6 +71,7 @@
 				0AFC09FC22875E580006A355 /* View Controllers */,
 				0AFC09FB22875E440006A355 /* Models */,
 				0AFC09FD22875F3B0006A355 /* Model Controllers */,
+				0A14284D2285E6CA00C5842C /* Info.plist */,
 			);
 			path = Timely;
 			sourceTree = "<group>";
@@ -109,7 +110,6 @@
 			isa = PBXGroup;
 			children = (
 				0A1428412285E6C900C5842C /* AppDelegate.swift */,
-				0A14284D2285E6CA00C5842C /* Info.plist */,
 			);
 			name = "Model Controllers";
 			sourceTree = "<group>";

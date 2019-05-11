@@ -84,7 +84,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Timing Journal" id="qXG-GG-Qfv"/>
                     <connections>
-                        <outlet property="addTimingButton" destination="lKq-Lu-zbd" id="vUr-Ee-lGD"/>
+                        <outlet property="addButton" destination="lKq-Lu-zbd" id="vUr-Ee-lGD"/>
                         <outlet property="stackView" destination="o44-DM-iXq" id="YZY-9P-rot"/>
                     </connections>
                 </viewController>
