@@ -13,7 +13,6 @@ struct Timing {
     var name: String
     var color: UIColor
     var image: UIImage
-    
 }
 
 enum TimingType: String {
@@ -23,7 +22,6 @@ enum TimingType: String {
     case onTime
     case superEarly
     case superLate
-    
 }
 
 extension Timing {
