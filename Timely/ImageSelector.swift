@@ -7,6 +7,7 @@
 //
 //  ImageSelector shows bar of selectable images, and a surrounding highlight
 //    which animates upon selection.
+//
 //  How to use:
 //    1. Instantiate using `ImageSelector()`
 //    2. Set an array of images.
@@ -70,17 +71,7 @@ class ImageSelector: UIControl {
     
     private let highlightView = HighlightView()
     private var highlightViewXConstraint: NSLayoutConstraint!
-    private let selectorStackView: UIStackView = {
-        let stackView = UIStackView()
-        
-        stackView.axis = .horizontal
-        stackView.distribution = .fillEqually
-        stackView.alignment = .center
-        stackView.spacing = 12.0
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        
-        return stackView
-    }()
+    private let selectorStackView = SelectorStackView()
     
     private func commonInit() {
         addSubview(highlightView)
@@ -111,7 +102,7 @@ class ImageSelector: UIControl {
         highlightAnimator.startAnimation()
         
         
-    // Emit event.
+       // Emit event.
         sendActions(for: .valueChanged)
     }
 
