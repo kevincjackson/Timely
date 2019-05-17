@@ -12,7 +12,7 @@ class TimelyFormatter {
     
     static var dateFormatter: DateFormatter {
         let df = DateFormatter()
-        df.dateStyle = .medium
+        df.dateStyle = .full
         df.timeStyle = .short
         return df
     }

@@ -1,4 +1,4 @@
-//
+// 
 //  ViewController.swift
 //  Timely
 //
@@ -10,18 +10,19 @@ import UIKit
 
 class SelectionViewController: UIViewController {
 
-    @IBOutlet var addButton: UIButton!
+    @IBOutlet var entryButton: UIButton!
     @IBOutlet var timingSelector: ImageSelector!
     
     private var currentTiming: Timing? {
         didSet {
-            setAddButton(basedOnSelection: currentTiming)
+            setEntryButton(forTiming: currentTiming)
         }
     }
     
     private var timings = [Timing]() {
         didSet {
             timingSelector.images = timings.map { $0.image }
+            timingSelector.highlightColors = timings.map { $0.color }
         }
     }
     
@@ -32,12 +33,14 @@ class SelectionViewController: UIViewController {
         super.viewDidLoad()
         timings = [.superLate, .late, .onTime, .early, .superEarly]
     }
-    
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        currentTiming = timings[2]
+        let defaultIndex = 2
+        timingSelector.selectedIndex = defaultIndex
+        currentTiming = timings[defaultIndex]
     }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
         case "journalSegue":
@@ -51,22 +54,25 @@ class SelectionViewController: UIViewController {
     
     // MARK: - Helpers
     @IBAction private func timingSelectionChanged(_ sender: ImageSelector) {
-        let selectedIndex = sender.selectedIndex
+        guard let selectedIndex = sender.selectedIndex else { return }
         currentTiming = timings[selectedIndex]
     }
     
-    private func setAddButton(basedOnSelection currentTiming: Timing?) {
+    private func setEntryButton(forTiming currentTiming: Timing?) {
         guard let currentTiming = currentTiming else {
-            print("Couldn't set add button.")
-            addButton.setTitle(nil, for: .normal)
-            addButton.backgroundColor = nil
+            entryButton.setTitle(nil, for: .normal)
+            entryButton.backgroundColor = nil
             return
         }
-        addButton.setTitle("I'm \(currentTiming.name)", for: .normal)
-        addButton.backgroundColor = currentTiming.color
+        entryButton.setTitle("I'm \(currentTiming.name)", for: .normal)
+        
+        let buttonColorAnimation = UIViewPropertyAnimator(duration: 0.4, curve: .linear, animations: { [unowned self] in
+            self.entryButton.backgroundColor = currentTiming.color
+        })
+        buttonColorAnimation.startAnimation()
     }
     
-    @IBAction func addTimingButtonPressed(_ sender: UIButton) {
+    @IBAction func entryButtonPressed(_ sender: UIButton) {
         guard let currentTiming = currentTiming else {
             return
         }

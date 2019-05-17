@@ -41,7 +41,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="addTimingButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Etx-tM-RFq"/>
+                                    <action selector="entryButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Etx-tM-RFq"/>
                                 </connections>
                             </button>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oed-sx-ze2">
@@ -52,7 +52,7 @@
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZYr-Pl-G9L" customClass="ImageSelector" customModule="Timely" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" white="0.90000000000000002" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <connections>
                                                 <action selector="timingSelectionChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="joE-4q-F2g"/>
                                             </connections>
@@ -88,7 +88,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Timing Journal" id="qXG-GG-Qfv"/>
                     <connections>
-                        <outlet property="addButton" destination="lKq-Lu-zbd" id="vUr-Ee-lGD"/>
+                        <outlet property="entryButton" destination="lKq-Lu-zbd" id="vUr-Ee-lGD"/>
                         <outlet property="timingSelector" destination="ZYr-Pl-G9L" id="vQi-Yz-9w5"/>
                     </connections>
                 </viewController>
@@ -105,7 +105,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="journalCell" textLabel="bWx-pD-rzl" detailTextLabel="yW4-d4-z2r" style="IBUITableViewCellStyleSubtitle" id="1XS-4T-ZLE">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="journalCell" textLabel="bWx-pD-rzl" detailTextLabel="yW4-d4-z2r" imageView="giq-bs-Ee1" style="IBUITableViewCellStyleSubtitle" id="1XS-4T-ZLE">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1XS-4T-ZLE" id="87L-nr-F14">
@@ -126,6 +126,10 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="giq-bs-Ee1">
+                                            <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>

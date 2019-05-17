@@ -9,7 +9,7 @@
 import Foundation
 
 // Communicate to the receiver that there's a new TimingEntry.
-// Used to pass data forward to JournalViewController
+// Used to pass data forward to JournalViewController.
 protocol TimingSelectable {
     func timingSelected(_ timingEntry: TimingEntry)
 }
